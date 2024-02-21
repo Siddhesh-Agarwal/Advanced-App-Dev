@@ -9,4 +9,4 @@ export type Theme = {
     themeCost: number;
 }
 
-export type ThemePreview = Pick<Theme, "themeID" | "themeImageURL" | "themeName" | "themeCost">
+export type ThemePreview = Pick<Theme, "themeID" | "themeImageURL" | "themeName" | "themeDescription">

@@ -5,15 +5,13 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import './index.css'
-// import { Provider } from 'react-redux'
-// import { configureStore } from '@reduxjs/toolkit'
 import HomePage from './pages/HomePage.tsx'
 import SignInPage from './pages/auth/SignInPage.tsx';
 import SignUpPage from './pages/auth/SignUpPage.tsx';
 import PrivacyPage from './pages/PrivacyPage.tsx';
 import NotFoundPage from './pages/NotFound.tsx';
 import ThemePage from './pages/ThemePage.tsx';
-import DashboardPage from './pages/admin/DashboardPage.tsx';
+import EventsPage from './pages/admin/EventsPage.tsx';
 
 const router = createBrowserRouter([
   {
@@ -41,16 +39,14 @@ const router = createBrowserRouter([
     element: <ThemePage />
   },
   {
-    path: "/admin/dashboard",
-    element: <DashboardPage />
+    path: "/admin/events",
+    element: <EventsPage />
   }
 ]);
 
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    {/* <Provider store={store}> */}
     <RouterProvider router={router} />
-    {/* </Provider> */}
   </React.StrictMode>,
 )
