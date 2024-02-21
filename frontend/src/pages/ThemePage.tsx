@@ -5,12 +5,17 @@ import { ThemePreview } from "../types/theme";
 
 const Themes: ThemePreview[] = [
     {
-        "themeID": 1,
-        "themeName": "Star Wars",
-        "themeImageURL": "",
-        "themeCost": 400
+        themeID: 1,
+        themeName: "Star Wars",
+        themeImageURL: "src/assets/img/StarWars.jpg",
+        themeCost: 400
+    },
+    {
+        themeID: 2,
+        themeName: "Barbie",
+        themeImageURL: "",
+        themeCost: 500
     }
-
 ]
 
 export default function ThemePage() {

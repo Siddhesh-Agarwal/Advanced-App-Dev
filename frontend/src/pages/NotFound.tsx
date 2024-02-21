@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function NotFoundPage() {
     return (
 
-        <main className="relative h-screen overflow-hidden">
+        <main className="bg-white relative h-screen overflow-hidden">
             <header className="absolute top-0 left-0 right-0 z-20">
                 <nav className="container px-6 py-4 mx-auto md:px-12">
                     <div className="items-center justify-between md:flex">
@@ -35,7 +35,7 @@ export default function NotFoundPage() {
                         <h1 className="text-6xl font-thin text-center text-gray-800">
                             GOT LOST ?
                         </h1>
-                        <Link to="/" className="px-3 py-2 text-2xl font-light uppercase transition duration-200 ease-in border-b border-yellow-600 hover:bg-yellow-600 hover:text-white focus:outline-none">
+                        <Link to="/" className="px-3 py-2 text-2xl font-light uppercase transition duration-200 ease-in border-b border-sky-600 hover:bg-sky-600 hover:text-white focus:outline-none">
                             Take me home!!!
                         </Link>
                     </div>
