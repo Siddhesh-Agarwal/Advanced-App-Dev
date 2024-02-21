@@ -8,17 +8,9 @@ export default function Footer() {
                 <p>EventCraft inc.<br />Cringe since 2024</p>
             </aside>
             <nav>
-                <h6 className="footer-title">Services</h6>
-                <Link to="#" className="link link-hover">Branding</Link>
-                <Link to="#" className="link link-hover">Design</Link>
-                <Link to="#" className="link link-hover">Marketing</Link>
-                <Link to="#" className="link link-hover">Advertisement</Link>
-            </nav>
-            <nav>
                 <h6 className="footer-title">Company</h6>
                 <Link to="#" className="link link-hover">About us</Link>
                 <Link to="#" className="link link-hover">Contact</Link>
-                <Link to="#" className="link link-hover">Jobs</Link>
                 <Link to="#" className="link link-hover">Press kit</Link>
             </nav>
             <nav>
