@@ -1,9 +1,10 @@
+import { useState } from "react"
+import { FaCalendarMinus, FaFileContract } from "react-icons/fa6"
+import AdminSideBar from "../../components/AdminSidebar"
+import AdminHeader from "../../components/AdminHeader"
 import { Button } from "../../components/ui/button"
 import { TableHead, TableRow, TableHeader, TableCell, TableBody, Table } from "../../components/ui/table"
-import { FaBell, FaCalendar, FaCalendarMinus, FaFileContract, FaGear, FaHouse } from "react-icons/fa6"
-import { useState } from "react"
 import NotFoundPage from "../NotFound"
-import { Link } from "react-router-dom"
 
 export default function EventsPage() {
     const [admin] = useState<boolean>(true);
@@ -14,54 +15,9 @@ export default function EventsPage() {
 function Events() {
     return (
         <div className="grid bg-white min-h-screen w-full lg:grid-cols-[280px_1fr]">
-            <div className="hidden border-r bg-gray-100/40 lg:block dark:bg-gray-800/40">
-                <div className="flex h-full max-h-screen flex-col gap-2">
-                    <div className="flex h-[60px] items-center border-b px-6">
-                        <Link className="flex items-center gap-2 font-semibol" to="/">
-                            <span className="bg-black text-white py-2 px-3">EventCraft.</span>
-                        </Link>
-                        <Button className="ml-auto h-8 w-8 rounded-md" size="icon" variant="outline">
-                            <FaBell className="h-4 w-4" />
-                            <span className="sr-only">Toggle notifications</span>
-                        </Button>
-                    </div>
-                    <div className="flex-1 overflow-auto py-2">
-                        <nav className="grid items-start px-4 text-sm font-medium">
-                            <Link
-                                className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500  transition-all hover:text-gray-900 dark:bg-gray-800 dark:text-gray-50 dark:hover:text-gray-50"
-                                to="/admin/dashboard"
-                            >
-                                <FaHouse className="h-4 w-4" />
-                                Dashboard
-                            </Link>
-                            <Link
-                                className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-900 bg-gray-100 transition-all hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
-                                to="/admin/events"
-                            >
-                                <FaCalendar className="h-4 w-4" />
-                                Events
-                            </Link>
-                            <Link
-                                className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
-                                to="/admin/settings"
-                            >
-                                <FaGear className="h-4 w-4" />
-                                Settings
-                            </Link>
-                        </nav>
-                    </div>
-                </div>
-            </div>
+            <AdminSideBar selected="events"/>
             <div className="flex flex-col">
-                <header className="flex h-14 lg:h-[60px] items-center gap-4 border-b bg-gray-100/40 px-6 dark:bg-gray-800/40">
-                    <Link className="lg:hidden" to="/admin/dashboard">
-                        <FaHouse />
-                        <span className="sr-only">Home</span>
-                    </Link>
-                    <div className="flex-1">
-                        <h1 className="font-semibold text-lg">Upcoming Events</h1>
-                    </div>
-                </header>
+                <AdminHeader/>
                 <main className="flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-6">
                     <div className="border shadow-sm rounded-lg">
                         <Table>

@@ -12,6 +12,8 @@ import PrivacyPage from './pages/PrivacyPage.tsx';
 import NotFoundPage from './pages/NotFound.tsx';
 import ThemePage from './pages/ThemePage.tsx';
 import EventsPage from './pages/admin/EventsPage.tsx';
+import DashboardPage from './pages/admin/Dashboard.tsx';
+import ManagePage from './pages/admin/ManagePage.tsx';
 
 const router = createBrowserRouter([
   {
@@ -39,9 +41,21 @@ const router = createBrowserRouter([
     element: <ThemePage />
   },
   {
+    path: "/admin",
+    element: <DashboardPage />
+  },
+  {
+    path: "/admin/dashboard",
+    element: <DashboardPage />
+  },
+  {
     path: "/admin/events",
     element: <EventsPage />
-  }
+  },
+  {
+    path: "/admin/manage",
+    element: <ManagePage />
+  },
 ]);
 
 
