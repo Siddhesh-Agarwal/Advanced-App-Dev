@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Chart from "react-apexcharts";
 import { FaCalendarPlus, FaCheck, FaCircleCheck } from "react-icons/fa6"
+import { motion } from "framer-motion";
 import NotFoundPage from "../NotFound";
 import AdminSideBar from "../../components/AdminSidebar";
 import AdminHeader from "../../components/AdminHeader";
@@ -56,29 +57,38 @@ function Dashboard() {
         <div className="grid bg-white min-h-screen w-full lg:grid-cols-[280px_1fr]">
             <AdminSideBar selected="dashboard" />
             <div className="flex flex-col">
-                <AdminHeader />
+                <AdminHeader label="Dashboard" />
                 <main className="flex flex-col gap-4 p-4 md:gap-8 md:p-6">
                     <div className="flex flex-row w-full justify-between">
                         <div className="p-2 w-full">
-                            <div className="border shadow-md border-gray-200 px-4 py-6 rounded-lg bg-green-50">
+                            <motion.div
+                                className="border shadow-md border-gray-200 px-4 py-6 rounded-lg bg-green-50"
+                                whileHover={{ scale: 1.05 }}
+                                >
                                 <FaCheck className="text-green-500 w-12 h-12 mb-3 inline-block" />
                                 <h2 className="title-font font-medium text-3xl text-gray-900">1.3K</h2>
                                 <p className="leading-relaxed">Completed</p>
-                            </div>
+                            </motion.div>
                         </div>
                         <div className="p-2 w-full">
-                            <div className="border shadow-md border-gray-200 px-4 py-6 rounded-lg bg-red-50">
+                            <motion.div
+                                className="border shadow-md border-gray-200 px-4 py-6 rounded-lg bg-red-50"
+                                whileHover={{ scale: 1.05 }}
+                                >
                                 <FaCalendarPlus className="text-red-500 w-12 h-12 mb-3 inline-block" />
                                 <h2 className="title-font font-medium text-3xl text-gray-900">74</h2>
                                 <p className="leading-relaxed">Upcoming</p>
-                            </div>
+                            </motion.div>
                         </div>
                         <div className="p-2 w-full">
-                            <div className="border shadow-md border-gray-200 px-4 py-6 rounded-lg bg-blue-50">
+                            <motion.div
+                                className="border shadow-md border-gray-200 px-4 py-6 rounded-lg bg-blue-50"
+                                whileHover={{ scale: 1.05 }}
+                            >
                                 <FaCircleCheck className="text-blue-500 w-12 h-12 mb-3 inline-block" />
                                 <h2 className="title-font font-medium text-3xl text-gray-900">1.4K</h2>
                                 <p className="leading-relaxed">Overall</p>
-                            </div>
+                            </motion.div>
                         </div>
                     </div>
 

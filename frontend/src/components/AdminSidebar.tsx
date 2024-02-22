@@ -41,7 +41,7 @@ export default function AdminSideBar({selected}: {selected: "dashboard" | "event
                             NavLinks.map((ele: NavLink, index: number) => {
                                 return (
                                     <Link
-                                        className={`flex items-center gap-3 rounded-lg px-3 py-2 text-gray-900 ${(selected === ele.label.toLowerCase())?"bg-gray-100":"bg-white"} transition-all hover:text-gray-900`}
+                                        className={`flex items-center gap-3 rounded-lg px-3 py-2 ${(selected===ele.label.toLowerCase())?"text-black bg-gray-100 font-bold":"text-gray-800 bg-white"} transition-all hover:text-gray-900`}
                                         to={ele.to_url} key={index}
                                     >
                                         {ele.icon}
