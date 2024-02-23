@@ -1,13 +1,14 @@
-import { Label } from "../../components/ui/label"
-import { Input } from "../../components/ui/input"
-import { Button } from "../../components/ui/button"
-import { CardContent, Card } from "../../components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../components/ui/tabs"
-import { FaEnvelope, FaEye, FaPenToSquare, FaPhone } from "react-icons/fa6"
-import { createAvatar } from '@dicebear/core';
 import { avataaars } from '@dicebear/collection'
+import { createAvatar } from '@dicebear/core';
 import { useEffect, useState } from "react"
-import Navbar from "../../components/Navbar"
+import { FaEnvelope, FaEye, FaPenToSquare, FaPhone } from "react-icons/fa6"
+
+import { Label } from "@/components/ui/label"
+import { Input } from "@/components/ui/input"
+import { Button } from "@/components/ui/button"
+import { CardContent, Card } from "@/components/ui/card"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import Navbar from "@/components/Navbar"
 
 export default function ProfilePage() {
     return (

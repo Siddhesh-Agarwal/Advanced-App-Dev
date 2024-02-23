@@ -1,10 +1,10 @@
 import { useState } from "react"
 import { FaCalendarMinus, FaFileContract } from "react-icons/fa6"
-import AdminSideBar from "../../components/AdminSidebar"
-import AdminHeader from "../../components/AdminHeader"
-import { Button } from "../../components/ui/button"
-import { TableHead, TableRow, TableHeader, TableCell, TableBody, Table } from "../../components/ui/table"
-import NotFoundPage from "../NotFound"
+import AdminSideBar from "@/components/AdminSidebar"
+import AdminHeader from "@/components/AdminHeader"
+import { Button } from "@/components/ui/button"
+import { TableHead, TableRow, TableHeader, TableCell, TableBody, Table } from "@/components/ui/table"
+import NotFoundPage from "@/pages/NotFound"
 
 export default function EventsPage() {
     const [admin] = useState<boolean>(true);

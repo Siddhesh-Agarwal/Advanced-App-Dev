@@ -1,12 +1,12 @@
 import { useState } from "react";
-import NotFoundPage from "../NotFound";
-import AdminSideBar from "../../components/AdminSidebar";
-import AdminHeader from "../../components/AdminHeader";
-import { Card } from "../../components/ui/card";
-import { Button } from "../../components/ui/button";
-import { Label } from "../../components/ui/label";
-import { Input } from "../../components/ui/input";
-import { Textarea } from "../../components/ui/textarea";
+import NotFoundPage from "@/pages/NotFound";
+import AdminSideBar from "@/components/AdminSidebar";
+import AdminHeader from "@/components/AdminHeader";
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 
 export default function ManagePage() {
     const [admin] = useState<boolean>(true);

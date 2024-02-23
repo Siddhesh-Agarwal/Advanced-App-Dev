@@ -1,37 +1,37 @@
-import ThemeCard from "../components/ThemeCard";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
-import { ThemePreview } from "../types/theme";
+import ThemeCard from "@/components/ThemeCard";
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
+import { ThemePreview } from "@/types/theme";
 
 const Themes: ThemePreview[] = [
     {
         themeID: 1,
         themeName: "Classic",
-        themeImageURL: "src/assets/img/classic-theme.jpg",
+        themeImageURL: "/src/assets/img/classic-theme.jpg",
         themeDescription: "Traditional birthday fun.",
     },
     {
         themeID: 2,
         themeName: "Star Wars",
-        themeImageURL: "src/assets/img/starwars-theme.jpg",
+        themeImageURL: "/src/assets/img/starwars-theme.jpg",
         themeDescription: "Execute order 66.",
     },
     {
         themeID: 3,
         themeName: "Enchanted Forest",
-        themeImageURL: "src/assets/img/enchanted-forest-theme.jpg",
+        themeImageURL: "/src/assets/img/enchanted-forest-theme.jpg",
         themeDescription: "Magical celebration in the woods.",
     },
     {
         themeID: 4,
         themeName: "Dinosaurs",
-        themeImageURL: "src/assets/img/dino-theme.jpg",
+        themeImageURL: "/src/assets/img/dino-theme.jpg",
         themeDescription: "Rawwrrr 🦖",
     },
     {
         themeID: 5,
         themeName: "Halloween",
-        themeImageURL: "src/assets/img/halloween-theme.jpg",
+        themeImageURL: "/src/assets/img/halloween-theme.jpg",
         themeDescription: "Will sacrifice a child for extra."
     },
 ]

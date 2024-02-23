@@ -2,9 +2,9 @@ import { useState } from "react";
 import Chart from "react-apexcharts";
 import { FaCalendarPlus, FaCheck, FaCircleCheck } from "react-icons/fa6"
 import { motion } from "framer-motion";
-import NotFoundPage from "../NotFound";
-import AdminSideBar from "../../components/AdminSidebar";
-import AdminHeader from "../../components/AdminHeader";
+import NotFoundPage from "@/pages/NotFound";
+import AdminSideBar from "@/components/AdminSidebar";
+import AdminHeader from "@/components/AdminHeader";
 
 export default function DashboardPage() {
     const [admin] = useState<boolean>(true);
