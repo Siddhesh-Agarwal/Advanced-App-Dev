@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button"
 import { CardContent, Card } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import Navbar from "@/components/Navbar"
+import ProfileData from '@/types/profileData';
 
 export default function ProfilePage() {
     return (
@@ -34,13 +35,6 @@ export default function ProfilePage() {
             </Tabs>
         </>
     )
-}
-
-type ProfileData = {
-    name: string;
-    avatar: string;
-    email: string;
-    phoneNo: string;
 }
 
 function getAvatar(name: string) {

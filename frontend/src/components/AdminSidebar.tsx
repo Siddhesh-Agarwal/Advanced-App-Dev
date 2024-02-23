@@ -1,11 +1,6 @@
+import NavLink from "@/types/NavLink";
 import { FaCalendar, FaGear, FaHouse } from "react-icons/fa6";
-import { Link, NavLink } from "react-router-dom";
-
-type NavLink = {
-    label: string;
-    to_url: string;
-    icon: JSX.Element
-}
+import { Link } from "react-router-dom";
 
 const NavLinks: NavLink[] = [
     {

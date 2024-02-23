@@ -14,7 +14,7 @@ export default function ThemeCard({ data }: { data: ThemePreview }) {
                     />
                 </CardContent>
                 <CardHeader className="p-4">
-                    <CardTitle className="text-2xl text-black dark:text-gray-100">
+                    <CardTitle className="text-3xl text-black dark:text-gray-100">
                         {data.themeName}
                     </CardTitle>
                     <CardDescription className="text-md text-gray-700 dark:text-gray-300">

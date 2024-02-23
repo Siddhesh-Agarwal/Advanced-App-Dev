@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import { FaEnvelope, FaLockOpen } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
@@ -10,11 +11,11 @@ export default function LoginPage() {
                         EventCraft.
                     </Link>
                 </div>
-                <div className="flex flex-col justify-center px-8 pt-8 my-auto md:justify-start md:pt-0 md:px-24 lg:px-32">
-                    <p className="text-3xl text-center text-gray-950 font-semibold">
+                <div className="flex flex-col justify-center px-8 my-auto md:justify-start md:pt-0 md:px-24 lg:px-32">
+                    <p className="text-3xl text-center text-gray-950 font-semibold md:pb-4">
                         Welcome Back.
                     </p>
-                    <form className="flex flex-col pt-3 md:pt-8">
+                    <form className="flex flex-col pt-4">
                         <div className="flex flex-col pt-4">
                             <div className="flex relative ">
                                 <span className=" inline-flex  items-center px-3 border-t bg-white border-l border-b  border-gray-300 text-gray-500 shadow-sm text-sm">
@@ -23,7 +24,7 @@ export default function LoginPage() {
                                 <input type="text" id="design-login-email" className=" flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Email" />
                             </div>
                         </div>
-                        <div className="flex flex-col pt-4 mb-12">
+                        <div className="flex flex-col pt-4">
                             <div className="flex relative ">
                                 <span className=" inline-flex  items-center px-3 border-t bg-white border-l border-b  border-gray-300 text-gray-500 shadow-sm text-sm">
                                     <FaLockOpen />
@@ -31,13 +32,11 @@ export default function LoginPage() {
                                 <input type="password" id="design-login-password" className=" flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Password" />
                             </div>
                         </div>
-                        <button type="submit" className="w-full px-4 py-2 text-base font-semibold text-center text-white transition duration-200 ease-in bg-black shadow-md hover:text-black hover:bg-white focus:outline-none focus:ring-2">
-                            <span className="w-full">
-                                Submit
-                            </span>
-                        </button>
+                        <Button className="btn btn-outline btn-success bg-green-50 mt-12">
+                            Submit
+                        </Button>
                     </form>
-                    <div className="pt-12 pb-12 text-center text-gray-900">
+                    <div className="mt-12 text-center text-gray-900">
                         <p>
                             Don&#x27;t have an account?{' '}
                             <Link to="/user/SignUp/" className="font-semibold underline">
