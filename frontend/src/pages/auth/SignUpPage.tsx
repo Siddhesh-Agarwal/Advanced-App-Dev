@@ -51,7 +51,7 @@ export default function SignUpPage() {
                     <div className="pt-12 pb-12 text-center text-gray-900">
                         <p>
                             Already have an account?{' '}
-                            <Link to="/user/SignIn" className="font-semibold underline">
+                            <Link to="/user/SignIn/" className="font-semibold underline">
                                 Login here.
                             </Link>
                         </p>

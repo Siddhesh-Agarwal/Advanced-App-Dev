@@ -174,7 +174,7 @@ export default function PrivacyPage() {
                 <h2 className="text-3xl mt-4">Contact Us</h2>
                 <p className="text-md text-justify">If you have any questions about this Privacy Policy, You can contact us:</p>
                 <ul className="list-inside list-decimal">
-                    <li>By visiting this page on our website: <Link to="/contact" rel="external nofollow noopener" target="_blank">https://EventCraft.inc/contact</Link></li>
+                    <li>By visiting this page on our website: <Link to="/contact/" rel="external nofollow noopener" target="_blank">https://EventCraft.inc/contact</Link></li>
                 </ul>
             </main>
             <Footer />

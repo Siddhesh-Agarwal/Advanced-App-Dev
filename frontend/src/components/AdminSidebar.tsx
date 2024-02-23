@@ -10,17 +10,17 @@ type NavLink = {
 const NavLinks: NavLink[] = [
     {
         label: "Dashboard",
-        to_url: "/admin/dashboard",
+        to_url: "/admin/dashboard/",
         icon: <FaHouse className="h-4 w-4" />
     },
     {
         label: "Events",
-        to_url: "/admin/events",
+        to_url: "/admin/events/",
         icon: <FaCalendar className="h-4 w-4" />
     },
     {
         label: "Manage",
-        to_url: "/admin/manage",
+        to_url: "/admin/manage/",
         icon: <FaGear className="h-4 w-4" />
     },
 ]

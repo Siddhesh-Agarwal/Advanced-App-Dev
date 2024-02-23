@@ -14,6 +14,7 @@ import ThemePage from './pages/ThemePage.tsx';
 import EventsPage from './pages/admin/EventsPage.tsx';
 import DashboardPage from './pages/admin/Dashboard.tsx';
 import ManagePage from './pages/admin/ManagePage.tsx';
+import ProfilePage from './pages/user/ProfilePage.tsx';
 
 const router = createBrowserRouter([
   {
@@ -25,35 +26,39 @@ const router = createBrowserRouter([
     element: <HomePage />,
   },
   {
-    path: "/privacy",
+    path: "/privacy/",
     element: <PrivacyPage />,
   },
   {
-    path: "/user/SignIn",
+    path: "/profile/",
+    element: <ProfilePage/>
+  },
+  {
+    path: "/user/SignIn/",
     element: <SignInPage />,
   },
   {
-    path: "/user/SignUp",
+    path: "/user/SignUp/",
     element: <SignUpPage />,
   },
   {
-    path: "/themes",
+    path: "/themes/",
     element: <ThemePage />
   },
   {
-    path: "/admin",
+    path: "/admin/",
     element: <DashboardPage />
   },
   {
-    path: "/admin/dashboard",
+    path: "/admin/dashboard/",
     element: <DashboardPage />
   },
   {
-    path: "/admin/events",
+    path: "/admin/events/",
     element: <EventsPage />
   },
   {
-    path: "/admin/manage",
+    path: "/admin/manage/",
     element: <ManagePage />
   },
 ]);

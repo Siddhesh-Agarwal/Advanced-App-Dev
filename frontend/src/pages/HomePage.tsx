@@ -10,13 +10,13 @@ export default function HomePage() {
                 <nav className="container px-6 py-4 mx-auto md:px-12">
                     <div className="items-center justify-center flex">
                         <div className="items-center flex">
-                            <Link to="/themes" className="mx-3 text-lg text-white uppercase cursor-pointer hover:text-gray-300">
+                            <Link to="/themes/" className="mx-3 text-lg text-white uppercase cursor-pointer hover:text-gray-300">
                                 Themes
                             </Link>
-                            <Link to="/contact" className="mx-3 text-lg text-white uppercase cursor-pointer hover:text-gray-300">
+                            <Link to="/contact/" className="mx-3 text-lg text-white uppercase cursor-pointer hover:text-gray-300">
                                 Contact
                             </Link>
-                            <Link to="/user/SignIn" className="mx-3 text-lg text-white uppercase cursor-pointer hover:text-gray-300">
+                            <Link to="/user/SignIn/" className="mx-3 text-lg text-white uppercase cursor-pointer hover:text-gray-300">
                                 Login
                             </Link>
                         </div>
@@ -28,7 +28,7 @@ export default function HomePage() {
                     <h1 className="mt-4 font-extrabold leading-tight text-center text-white text-7xl sm:text-8xl">
                         Happy BDay.
                     </h1>
-                    <Link to="/user/SignUp" className="block px-4 py-3 mt-10 text-lg font-bold text-white uppercase bg-gray-800 hover:bg-gray-900">
+                    <Link to="/user/SignUp/" className="block px-4 py-3 mt-10 text-lg font-bold text-white uppercase bg-gray-800 hover:bg-gray-900">
                         Start Now
                     </Link>
                 </div>

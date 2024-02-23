@@ -5,7 +5,7 @@ export default function LoginPage() {
     return (
         <div className="flex flex-wrap w-full">
             <div className="flex flex-col w-full md:w-1/2">
-                <div className="flex justify-center pt-12 md:justify-start md:pl-12 md:-mb-24">
+                <div className="flex justify-center pt-12">
                     <Link to="/" className="p-4 text-xl font-bold text-white bg-black">
                         EventCraft.
                     </Link>
@@ -40,7 +40,7 @@ export default function LoginPage() {
                     <div className="pt-12 pb-12 text-center text-gray-900">
                         <p>
                             Don&#x27;t have an account?{' '}
-                            <Link to="/user/SignUp" className="font-semibold underline">
+                            <Link to="/user/SignUp/" className="font-semibold underline">
                                 Register here.
                             </Link>
                         </p>
