@@ -1,62 +1,63 @@
+import { FaEnvelope, FaLockOpen, FaUser } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 export default function SignUpPage() {
     return (
-        <main className="h-screen w-screen overflow-hidden flex justify-center items-center">
-            <form className="container max-w-2xl mx-auto shadow-md md:w-3/4 rounded-lg">
-                <div className="space-y-6 bg-black/25 rounded-lg">
-                    <div className="items-center w-full p-4 space-y-4 text-gray-900 md:inline-flex md:space-y-0">
-                        <h2 className="max-w-sm mx-auto md:w-1/3">
-                            Account
-                        </h2>
-                        <div className="max-w-sm mx-auto md:w-2/3">
-                            <div className=" relative ">
-                                <input type="text" id="user-info-email" className=" rounded-md border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Email" />
-                            </div>
-                        </div>
-                    </div>
-                    <hr />
-                    <div className="items-center w-full p-4 space-y-4 text-gray-900 md:inline-flex md:space-y-0">
-                        <h2 className="max-w-sm mx-auto md:w-1/3">
-                            Personal info
-                        </h2>
-                        <div className="max-w-sm mx-auto space-y-5 md:w-2/3">
-                            <div>
-                                <div className="relative">
-                                    <input type="text" id="user-info-name" className=" rounded-md border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Name" />
-                                </div>
-                            </div>
-                            <div>
-                                <div className="relative">
-                                    <input type="text" id="user-info-phone" className=" rounded-md border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Phone number" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <hr />
-                    <div className="items-center w-full p-4 space-y-4 text-gray-900 md:inline-flex md:space-y-0">
-                        <h2 className="max-w-sm mx-auto md:w-4/12">
-                            Password
-                        </h2>
-                        <div className="max-w-sm mx-auto space-y-5 md:w-2/3">
-                            <div className=" relative ">
-                                <input type="password" id="password" className=" rounded-md border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Password" />
-                            </div>
-                        </div>
-                    </div>
-                    <hr />
-                    <div className="w-full px-4 pb-4 ml-auto text-gray-500 md:w-1/3">
-                        <button type="submit" className="py-2 px-4  bg-blue-600 hover:bg-blue-700 focus:ring-blue-500 focus:ring-offset-blue-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-md">
-                            Create Account
-                        </button>
-                    </div>
-                    <Link to="/user/SignIn">
-                        <div className="underline text-blue-400">
-                            Already have an account? Sign in.
-                        </div>
+        <div className="flex flex-wrap w-full">
+            <div className="w-1/2 shadow-2xl">
+                <img className="hidden object-cover w-full h-screen md:block" src="/src/assets/img/pexels-melissa-698907.jpg" alt="cripptity crappity" />
+            </div>
+            <div className="flex flex-col w-full md:w-1/2">
+                <div className="flex justify-center pt-12">
+                    <Link to="/" className="p-4 text-xl font-bold text-white bg-black">
+                        EventCraft.
                     </Link>
                 </div>
-            </form>
-        </main>
+                <div className="flex flex-col justify-center px-8 pt-8 my-auto md:justify-start md:pt-0 md:px-24 lg:px-32">
+                    <p className="text-3xl text-center text-gray-950 font-semibold">
+                        Welcome.
+                    </p>
+                    <form className="flex flex-col pt-3 md:pt-8">
+                        <div className="flex flex-col pt-4">
+                            <div className="flex relative ">
+                                <span className=" inline-flex  items-center px-3 border-t bg-white border-l border-b  border-gray-300 text-gray-500 shadow-sm text-sm">
+                                    <FaUser />
+                                </span>
+                                <input type="text" id="design-login-name" className="flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="John Doe" />
+                            </div>
+                        </div>
+                        <div className="flex flex-col pt-4">
+                            <div className="flex relative ">
+                                <span className=" inline-flex  items-center px-3 border-t bg-white border-l border-b  border-gray-300 text-gray-500 shadow-sm text-sm">
+                                    <FaEnvelope />
+                                </span>
+                                <input type="text" id="design-login-email" className=" flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Email" />
+                            </div>
+                        </div>
+                        <div className="flex flex-col pt-4">
+                            <div className="flex relative ">
+                                <span className=" inline-flex items-center px-3 border-t bg-white border-l border-b  border-gray-300 text-gray-500 shadow-sm text-sm">
+                                    <FaLockOpen />
+                                </span>
+                                <input type="password" id="design-login-password" className=" flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Password" />
+                            </div>
+                        </div>
+                        <button type="submit" className="mt-12 w-full px-4 py-2 text-base font-semibold text-center text-white transition duration-200 ease-in bg-black shadow-md hover:text-black hover:bg-white focus:outline-none focus:ring-2">
+                            <span className="w-full">
+                                Submit
+                            </span>
+                        </button>
+                    </form>
+                    <div className="pt-12 pb-12 text-center text-gray-900">
+                        <p>
+                            Already have an account?{' '}
+                            <Link to="/user/SignIn" className="font-semibold underline">
+                                Login here.
+                            </Link>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     )
 }

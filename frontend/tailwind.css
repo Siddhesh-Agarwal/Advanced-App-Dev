@@ -2539,6 +2539,14 @@ body {
   margin-top: 1.5rem;
 }
 
+.mt-12 {
+  margin-top: 3rem;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
 .block {
   display: block;
 }
@@ -2944,10 +2952,6 @@ body {
 .bg-gray-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
-}
-
-.bg-gray-50\/75 {
-  background-color: rgb(249 250 251 / 0.75);
 }
 
 .bg-gray-800 {

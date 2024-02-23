@@ -34,7 +34,7 @@ function Manage() {
                                 <Textarea id="description" placeholder="Describe the theme here..." className="input bg-gray-50 focus:bg-gray-100" required />
                             </div>
                             <div className="space-y-2">
-                                <Label htmlFor="file">Theme Cost</Label>
+                                <Label htmlFor="file">Theme Cost (per person)</Label>
                                 <Input id="cost" type="number" placeholder="₹500" className="input bg-gray-50 focus:bg-gray-100" defaultValue={500} />
                             </div>
                             <div className="space-y-2">

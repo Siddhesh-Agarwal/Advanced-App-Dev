@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 export default function LoginPage() {
     return (
-
         <div className="flex flex-wrap w-full">
             <div className="flex flex-col w-full md:w-1/2">
                 <div className="flex justify-center pt-12 md:justify-start md:pl-12 md:-mb-24">
@@ -13,7 +12,7 @@ export default function LoginPage() {
                 </div>
                 <div className="flex flex-col justify-center px-8 pt-8 my-auto md:justify-start md:pt-0 md:px-24 lg:px-32">
                     <p className="text-3xl text-center text-gray-950 font-semibold">
-                        Welcome.
+                        Welcome Back.
                     </p>
                     <form className="flex flex-col pt-3 md:pt-8">
                         <div className="flex flex-col pt-4">
