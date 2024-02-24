@@ -1,7 +1,9 @@
+import { useAppSelector } from "@/redux/hooks";
 import { FaRightFromBracket } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
+    const data = useAppSelector((state) => state.data.profile);
     return (
         <header className="navbar top-0 sticky z-20 justify-between bg-base-100 px-2 md:px-8 border-b shadow-sm mb-5">
             <Link to="/" className="flex flex-row ml-3">
@@ -12,7 +14,7 @@ export default function Navbar() {
                 <Link to="/profile/">
                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                         <div className="w-10 rounded-full">
-                            <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                            <img alt="Tailwind CSS Navbar component" src={data.avatar} />
                         </div>
                     </div>
                 </Link>

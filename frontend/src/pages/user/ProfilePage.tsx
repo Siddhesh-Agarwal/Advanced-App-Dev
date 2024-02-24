@@ -1,15 +1,11 @@
-import { avataaars } from '@dicebear/collection'
-import { createAvatar } from '@dicebear/core';
-import { useEffect, useState } from "react"
 import { FaEnvelope, FaEye, FaPenToSquare, FaPhone } from "react-icons/fa6"
-
 import { Label } from "@/components/ui/label"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { CardContent, Card } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import Navbar from "@/components/Navbar"
-import ProfileData from '@/types/profileData';
+import { useAppSelector } from '@/redux/hooks';
 
 export default function ProfilePage() {
     return (
@@ -37,15 +33,8 @@ export default function ProfilePage() {
     )
 }
 
-function getAvatar(name: string) {
-    return createAvatar(avataaars, { "seed": name }).png().toDataUri();
-}
-
 function ProfileView() {
-    const [data, setData] = useState<ProfileData>({ name: "Alice Blue", avatar: "", email: "alice@example.com", phoneNo: "+1 (555) 123-4567" });
-    useEffect(() => {
-        getAvatar(data.name).then((avatar) => setData({ ...data, avatar: avatar }))
-    }, [data])
+    const data = useAppSelector((state) => state.data.profile);
 
     return (
         <div className="w-full py-6 space-y-3">

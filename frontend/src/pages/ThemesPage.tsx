@@ -36,7 +36,7 @@ const Themes: ThemePreview[] = [
     },
 ]
 
-export default function ThemePage() {
+export default function ThemesPage() {
     return (
         <div className="min-h-screen w-screen overflow-x-hidden">
             <Navbar />

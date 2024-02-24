@@ -1,4 +1,3 @@
-import { useState } from "react";
 import NotFoundPage from "@/pages/NotFound";
 import AdminSideBar from "@/components/AdminSidebar";
 import AdminHeader from "@/components/AdminHeader";
@@ -7,9 +6,10 @@ import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { useAppSelector } from "@/redux/hooks";
 
 export default function ManagePage() {
-    const [admin] = useState<boolean>(true);
+    const admin = useAppSelector((state) => state.data.isAdmin);
     if (admin)
         return <Manage />
     return <NotFoundPage />

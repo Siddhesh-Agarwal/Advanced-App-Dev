@@ -5,9 +5,10 @@ import { motion } from "framer-motion";
 import NotFoundPage from "@/pages/NotFound";
 import AdminSideBar from "@/components/AdminSidebar";
 import AdminHeader from "@/components/AdminHeader";
+import { useAppSelector } from "@/redux/hooks";
 
 export default function DashboardPage() {
-    const [admin] = useState<boolean>(true);
+    const admin = useAppSelector((state) => state.data.isAdmin);
     if (admin)
         return <Dashboard />
     return <NotFoundPage />
