@@ -9,7 +9,6 @@ import { store } from '@/redux/store';
 import HomePage from '@/pages/HomePage.tsx'
 import SignInPage from '@/pages/auth/SignInPage.tsx';
 import SignUpPage from '@/pages/auth/SignUpPage.tsx';
-import PrivacyPage from '@/pages/PrivacyPage.tsx';
 import NotFoundPage from '@/pages/NotFound.tsx';
 import ThemesPage from '@/pages/ThemesPage';
 import EventsPage from '@/pages/admin/EventsPage.tsx';
@@ -26,10 +25,6 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <HomePage />,
-  },
-  {
-    path: "/privacy/",
-    element: <PrivacyPage />,
   },
   {
     path: "/profile/",
