@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import {
   createBrowserRouter,
+  Navigate,
   RouterProvider,
 } from "react-router-dom";
 import { Provider } from 'react-redux';
@@ -49,7 +50,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/admin/",
-    element: <DashboardPage />
+    element: <Navigate to={"/admin/dashboard/"} />
   },
   {
     path: "/admin/dashboard/",
