@@ -1,4 +1,4 @@
-import ProfileData from '@/types/profileData';
+import ProfileData from '@/types/ProfileData';
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 
 export type SiteConfigData = {

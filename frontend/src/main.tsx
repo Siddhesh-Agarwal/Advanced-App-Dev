@@ -16,6 +16,7 @@ import DashboardPage from '@/pages/admin/Dashboard.tsx';
 import ManagePage from '@/pages/admin/ManagePage.tsx';
 import ProfilePage from '@/pages/user/ProfilePage.tsx';
 import './globals.css'
+import ContactPage from './pages/ContactPage';
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
   {
     path: "/profile/",
     element: <ProfilePage />
+  },
+  {
+    path: "/contact/",
+    element: <ContactPage />
   },
   {
     path: "/user/SignIn/",

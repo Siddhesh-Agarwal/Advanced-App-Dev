@@ -1,7 +1,8 @@
 import ThemeCard from "@/components/ThemeCard";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
-import { ThemePreview } from "@/types/theme";
+import { ThemePreview } from "@/types/Theme";
+import { BackgroundGradient } from "@/components/bg-gradient";
 
 const Themes: ThemePreview[] = [
     {
@@ -46,7 +47,7 @@ export default function ThemesPage() {
                     {
                         Themes.map((theme: ThemePreview, index: number) => {
                             return (
-                                <ThemeCard data={theme} key={index} />
+                                <BackgroundGradient children={<ThemeCard data={theme} key={index} />} />
                             )
                         })
                     }

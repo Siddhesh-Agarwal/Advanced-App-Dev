@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ThemePreview } from "@/types/theme";
+import { ThemePreview } from "@/types/Theme";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function ThemeCard({ data }: { data: ThemePreview }) {
