@@ -8,15 +8,15 @@ export type SiteConfigData = {
 }
 
 function avatarURL(name: string) {
-    return `https://api.dicebear.com/7.x/avataaars/svg?seed=${name.replace(" ", "+")}`
+    return `https://api.dicebear.com/7.x/fun-emoji/svg?seed=${name.replace(" ", "+")}`
 }
 
 const initialState: SiteConfigData = {
     isDarkMode: false,
     isAdmin: false,
     profile: {
-        name: "Jane Doe",
-        avatar: avatarURL("Jane Doe"),
+        name: "Siddhesh Agarwal",
+        avatar: avatarURL("Siddhesh Agarwal"),
         email: "janedoe@example.com",
         phoneNo: "+91 987654321",
     }
