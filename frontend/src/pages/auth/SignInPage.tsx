@@ -20,8 +20,6 @@ export default function LoginPage() {
             toast.error("Please enter email and password")
         } else if (!z.string().email().safeParse(loginData.email).success) {
             toast.error("Invalid Email format")
-        } else if (!z.string().min(8).max(20).safeParse(loginData.password).success) {
-            toast.error("Password must contain 8 to 20 character")
         } else {
             toast.success("Authentication Successful")
             if (admin) {

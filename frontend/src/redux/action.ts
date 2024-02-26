@@ -13,10 +13,10 @@ function avatarURL(name: string) {
 
 const initialState: SiteConfigData = {
     isDarkMode: false,
-    isAdmin: false,
+    isAdmin: true,
     profile: {
-        name: "Siddhesh Agarwal",
-        avatar: avatarURL("Siddhesh Agarwal"),
+        name: "John Doe",
+        avatar: avatarURL("John Doe"),
         email: "janedoe@example.com",
         phoneNo: "+91 987654321",
     }

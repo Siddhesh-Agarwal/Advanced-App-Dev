@@ -35,6 +35,30 @@ const Themes: ThemePreview[] = [
         themeImageURL: "/src/assets/img/halloween-theme.jpg",
         themeDescription: "Will sacrifice a child for extra."
     },
+    {
+        themeID: 6,
+        themeName: "Confetti Theme",
+        themeImageURL: "https://plus.unsplash.com/premium_photo-1667512875134-0f12ea18977b",
+        themeDescription: "I mean, who doesn't like confetti and colors?"
+    },
+    {
+        themeID: 7,
+        themeName: "Beach Theme",
+        themeImageURL: "https://images.unsplash.com/photo-1496843916299-590492c751f4",
+        themeDescription: "The beach you like."
+    },
+    {
+        themeID: 8,
+        themeName: "Disco Theme",
+        themeImageURL: "https://images.unsplash.com/photo-1505236858219-8359eb29e329",
+        themeDescription: "It is time to disco 🕺🏻💃🏻"
+    },
+    {
+        themeID: 9,
+        themeName: "Barbie Theme",
+        themeImageURL: "https://plus.unsplash.com/premium_photo-1661749376000-1e96fe6fddeb",
+        themeDescription: "Hello Barbie!"
+    },
 ]
 
 export default function ThemesPage() {

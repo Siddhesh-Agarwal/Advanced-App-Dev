@@ -49,6 +49,36 @@ const products: ParallaxItem[] = [
         thumbnail: "https://plus.unsplash.com/premium_photo-1661749376000-1e96fe6fddeb",
         link: "/themes/9"
     },
+    {
+        title: "Classic Theme",
+        thumbnail: "/src/assets/img/classic-theme.jpg",
+        link: "/themes/1"
+    },
+    {
+        title: "Star Wars Theme",
+        thumbnail: "/src/assets/img/starwars-theme.jpg",
+        link: "/themes/2"
+    },
+    {
+        title: "Enchanted Forest Theme",
+        thumbnail: "/src/assets/img/enchanted-forest-theme.jpg",
+        link: "/themes/3"
+    },
+    {
+        title: "Dinosaurs Theme",
+        thumbnail: "/src/assets/img/dino-theme.jpg",
+        link: "/themes/4"
+    },
+    {
+        title: "Halloween Theme",
+        thumbnail: "/src/assets/img/halloween-theme.jpg",
+        link: "/themes/5"
+    },
+    {
+        title: "Confetti Theme",
+        thumbnail: "https://plus.unsplash.com/premium_photo-1667512875134-0f12ea18977b",
+        link: "/themes/6"
+    },
 ]
 
 type FAQ = {
@@ -98,7 +128,7 @@ export default function Component() {
             {/* Main content */}
             <main className="flex flex-col items-center h-screen">
                 <Confetti className="w-screen h-screen" numberOfPieces={125} gravity={0.05} initialVelocityY={8} opacity={0.75} />
-                <div className="flex max-w-xl flex-col items-center pb-16 pt-8 text-center lg:pb-48 lg:pt-32">
+                <div className="hero flex max-w-xl flex-col items-center pb-16 pt-8 text-center lg:pb-48 lg:pt-32">
                     <p className="mb-4 font-semibold text-indigo-500 md:mb-6 text-3xl md:text-6xl">Plan the Perfect Party</p>
 
                     <h1 className="mb-8 text-gray-800 text-lg md:mb-12 md:text-2xl">
@@ -118,7 +148,7 @@ export default function Component() {
                 </div>
             </main >
 
-            <section className="w-screen">
+            <section className="w-screen min-h-screen">
                 <HeroParallax products={products} />
             </section>
 
