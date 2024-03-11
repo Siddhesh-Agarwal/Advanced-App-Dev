@@ -14,7 +14,7 @@ const NavLinks: NavLink[] = [
         icon: <FaCalendar className="h-4 w-4" />
     },
     {
-        label: "Manage",
+        label: "Manage Themes",
         to_url: "/admin/manage/",
         icon: <FaGear className="h-4 w-4" />
     },

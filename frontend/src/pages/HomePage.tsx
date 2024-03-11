@@ -2,6 +2,7 @@ import { HeroParallax } from "@/components/hero-parallax"
 import { Link } from "react-router-dom"
 import Confetti from 'react-confetti'
 import ParallaxItem from "@/types/parallaxItem"
+import Navbar from "@/components/Navbar"
 
 const products: ParallaxItem[] = [
     {
@@ -108,22 +109,7 @@ const FAQs: FAQ[] = [
 export default function Component() {
     return (
         <div className="flex flex-col min-h-screen">
-            <header className="px-4 lg:px-6 h-14 flex items-center justify-between bg-white border-b z-10">
-                <Link className="flex items-center justify-center bg-black text-white px-3 py-2" to="/">
-                    EventCraft.
-                </Link>
-                <nav className="ml-auto flex gap-4 sm:gap-6">
-                    <Link className="text-sm font-medium hover:underline underline-offset-4" to="/themes/">
-                        Themes
-                    </Link>
-                    <Link className="text-sm font-medium hover:underline underline-offset-4" to="/contact/">
-                        Contact
-                    </Link>
-                    <Link className="text-sm font-medium hover:underline underline-offset-4" to="/user/SignIn/">
-                        Login
-                    </Link>
-                </nav>
-            </header>
+            <Navbar />
 
             {/* Main content */}
             <main className="flex flex-col items-center h-screen">

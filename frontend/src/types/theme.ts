@@ -1,5 +1,5 @@
 export type Theme = {
-    themeID: number;
+    themeId: number;
     themeName: string;
     themeImageURL: string;
     themeDescription: string;
@@ -9,4 +9,4 @@ export type Theme = {
     themeCost: number;
 }
 
-export type ThemePreview = Pick<Theme, "themeID" | "themeImageURL" | "themeName" | "themeDescription">
+export type ThemePreview = Pick<Theme, "themeId" | "themeImageURL" | "themeName" | "themeDescription">

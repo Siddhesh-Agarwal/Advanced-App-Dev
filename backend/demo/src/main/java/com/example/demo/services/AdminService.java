@@ -21,6 +21,7 @@ public class AdminService {
         return adminRepo.findById(id);
     }
 
+    @SuppressWarnings("null")
     public String updateAdmin(AdminModel adminModel) {
         Optional<User> user = userRepo.findByEmail(adminModel.getUser().getEmail());
         if (user.isEmpty()) {

@@ -10,7 +10,6 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Data
 @Entity
@@ -27,9 +26,7 @@ public class EventModel {
     private String eventTime;
     @ManyToOne
     @JoinColumn(name = "theme_id")
-    @JsonIgnore
     private ThemeModel eventTheme;
     @ManyToOne
-    @JsonIgnore
     private UserModel userModel;
 }

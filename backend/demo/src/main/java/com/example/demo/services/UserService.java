@@ -17,6 +17,7 @@ public class UserService {
     @Autowired
     UserRepo userRepo;
 
+    @SuppressWarnings("null")
     public String addUser(UserModel userModel) {
         userRepository.save(userModel);
         return "Successfully added";
@@ -30,6 +31,7 @@ public class UserService {
         return userRepository.findAll();
     }
 
+    @SuppressWarnings("null")
     public String updateUserModel(UserModel userModel) {
         Optional<User> user = userRepo.findByEmail(userModel.getUser().getEmail());
         System.out.println(user);

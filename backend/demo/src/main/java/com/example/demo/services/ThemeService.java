@@ -21,9 +21,7 @@ public class ThemeService {
     @Autowired
     private AdminRepo adminRepo;
 
-    public ThemeModel addTheme(ThemeModel theme, Integer adminId) {
-        Optional<AdminModel> admin = adminRepo.findById(adminId);
-        theme.setAdmin(admin.get());
+    public ThemeModel addTheme(ThemeModel theme) {
         return themeRepo.save(theme);
     }
 
@@ -33,37 +31,19 @@ public class ThemeService {
     }
 
     public String updateTheme(int themeId, ThemeModel theme) {
+        Optional<AdminModel> admin = adminRepo.findById(themeId);
+        theme.setAdmin(admin.get());
         themeRepo.save(theme);
         return "Successfully updated";
     }
 
     public List<ThemeModel> getDetails() {
-        List<ThemeModel> arr = new ArrayList<>();
-        arr = (List<ThemeModel>) themeRepo.findAll();
+        List<ThemeModel> arr = themeRepo.findAll();
         return arr;
     }
 
-    public ThemeModel update(int themeId, ThemeModel theme) {
-        ThemeModel themeModal = themeRepo.findById(themeId).get();
-        if (Objects.nonNull(themeModal) && (!Objects.isNull(themeModal.getThemeName()))) {
-            themeModal.setThemeName(theme.getThemeName());
-        }
-        if (Objects.nonNull(themeModal) && (!Objects.isNull(themeModal.getThemeDescription()))) {
-            themeModal.setThemeDescription(theme.getThemeDescription());
-        }
-        if (Objects.nonNull(themeModal) && (!Objects.isNull(themeModal.getAddons()))) {
-            themeModal.setAddons(theme.getAddons());
-        }
-        if (Objects.nonNull(themeModal) && (!Objects.isNull(themeModal.getThemeImageURL()))) {
-            themeModal.setThemeImageURL(theme.getThemeImageURL());
-        }
-        if (Objects.nonNull(themeModal) && (!Objects.isNull(themeModal.getThemeCost()))) {
-            themeModal.setThemeCost(theme.getThemeCost());
-        }
-        if (Objects.nonNull(themeModal) && (!Objects.isNull(themeModal.getFoodItems()))) {
-            themeModal.setFoodItems(theme.getFoodItems());
-        }
-        return themeRepo.save(themeModal);
+    public Optional<ThemeModel> getById(int id) {
+        Optional<ThemeModel> theme = themeRepo.findById(id);
+        return theme;
     }
-
 }

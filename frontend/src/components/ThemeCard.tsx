@@ -4,8 +4,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 
 export default function ThemeCard({ data }: { data: ThemePreview }) {
     return (
-        <Link to={`/theme/${data.themeID}`} className="flex">
-            <Card className="flex flex-col bg-gray-50 shadow-md dark:bg-slate-900">
+        <Link to={`/theme/${data.themeId}`} className="flex h-full">
+            <Card className="flex flex-col bg-gray-50 shadow-md dark:bg-slate-900 h-full">
                 <CardContent className="flex flex-1 items-center justify-center w-full">
                     <img
                         alt="Classic"

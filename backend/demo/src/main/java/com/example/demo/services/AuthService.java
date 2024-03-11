@@ -30,6 +30,7 @@ public class AuthService {
     private final JWTService jwtService;
     private final AuthenticationManager authenticationManager;
 
+    @SuppressWarnings("null")
     public AuthResponse register(RegisterRequest request) {
         User user = User
                 .builder()
@@ -60,6 +61,7 @@ public class AuthService {
 
         return AuthResponse.builder()
                 .token(jwtService.generateToken(user))
+                .userRole((user.getRole() == Role.ADMIN) ? "admin" : "user")
                 .build();
     }
 
@@ -67,12 +69,6 @@ public class AuthService {
         authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(request.getEmail(), request.getPassword()));
         User user = userRepository.findByEmail(request.getEmail()).orElseThrow();
-        if ((request.getRole().equals("admin") && user.getRole() != Role.ADMIN)
-                || (request.getRole().equals("user") && user.getRole() != Role.USER)) {
-            return AuthResponse.builder()
-                    .token("Invalid Credentials")
-                    .build();
-        }
         return AuthResponse.builder()
                 .token(jwtService.generateToken(user))
                 .userRole((user.getRole() == Role.ADMIN) ? "admin" : "user")

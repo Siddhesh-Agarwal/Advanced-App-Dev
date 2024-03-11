@@ -2,7 +2,6 @@ import ProfileData from '@/types/ProfileData';
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 
 export type SiteConfigData = {
-    isDarkMode: boolean;
     isAdmin: boolean;
     profile: ProfileData;
 }
@@ -12,7 +11,6 @@ function avatarURL(name: string) {
 }
 
 const initialState: SiteConfigData = {
-    isDarkMode: false,
     isAdmin: true,
     profile: {
         name: "John Doe",
@@ -22,17 +20,15 @@ const initialState: SiteConfigData = {
     }
 }
 
-const setSiteCongidData = createSlice({
+const setSiteConfigData = createSlice({
     name: "setData",
     initialState: initialState,
     reducers: {
-        switchMode: (state) => {
-            state.isDarkMode = !state.isDarkMode
+        switchIsAdmin: (state, action: PayloadAction<{ isAdmin: boolean }>) => {
+            state.isAdmin = action.payload.isAdmin;
         },
-        switchIsAdmin: (state) => {
-            state.isAdmin = !state.isAdmin
-        },
-        switchProfile: (state, action: PayloadAction<{name: string; email: string; phoneNo: string}>) => {
+
+        switchProfile: (state, action: PayloadAction<{ name: string; email: string; phoneNo: string }>) => {
             state.profile.name = action.payload.name;
             state.profile.avatar = avatarURL(state.profile.name);
             state.profile.email = action.payload.email;
@@ -41,5 +37,5 @@ const setSiteCongidData = createSlice({
     }
 })
 
-export const { switchMode, switchIsAdmin, switchProfile } = setSiteCongidData.actions
-export default setSiteCongidData.reducer 
+export const { switchIsAdmin, switchProfile } = setSiteConfigData.actions
+export default setSiteConfigData.reducer 

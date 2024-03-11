@@ -27,17 +27,15 @@ public class SwaggerConfig {
     public OpenAPI openAPI() {
         return new OpenAPI()
                 .servers(List.of(new Server().url(JWT_LOCALHOST_URL)))
-                .addSecurityItem(new SecurityRequirement()
-                        .addList(JWT_SECURITY_SCHEME_NAME))
+                .addSecurityItem(new SecurityRequirement().addList(JWT_SECURITY_SCHEME_NAME))
                 .components(
-                        new Components()
-                                .addSecuritySchemes(
-                                        JWT_SECURITY_SCHEME_NAME,
-                                        new SecurityScheme().name(
-                                                JWT_SECURITY_SCHEME_NAME)
-                                                .type(HTTP)
-                                                .scheme(JWT_SCHEME)
-                                                .description(JWT_DESCRIPTION)
-                                                .bearerFormat(JWT_BEARER_FORMAT)));
+                        new Components().addSecuritySchemes(
+                                JWT_SECURITY_SCHEME_NAME,
+                                new SecurityScheme().name(
+                                        JWT_SECURITY_SCHEME_NAME)
+                                        .type(HTTP)
+                                        .scheme(JWT_SCHEME)
+                                        .description(JWT_DESCRIPTION)
+                                        .bearerFormat(JWT_BEARER_FORMAT)));
     }
 }

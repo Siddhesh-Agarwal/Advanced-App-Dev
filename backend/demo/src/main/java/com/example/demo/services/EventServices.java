@@ -30,9 +30,10 @@ public class EventServices {
         return "Successfully deleted";
     }
 
-    public String updateEvent(int eventId, EventModel event) {
+    @SuppressWarnings("null")
+    public EventModel updateEvent(int eventId, EventModel event) {
         eventRepo.save(event);
-        return "Successfully updated";
+        return event;
     }
 
     public List<EventModel> getDetails() {
@@ -41,12 +42,12 @@ public class EventServices {
         return arr;
     }
 
+    @SuppressWarnings("null")
     public EventModel addEvent(EventModel event, Integer userId, Integer themeId) {
         Optional<UserModel> user = userRepo.findById(userId);
         Optional<ThemeModel> theme = themeRepo.findById(themeId);
         event.setUserModel(user.get());
         event.setEventTheme(theme.get());
-        // event.setEventTheme();
         return eventRepo.save(event);
     }
 }
